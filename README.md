@@ -1,7 +1,20 @@
-# HAHAHAHA
+# NTU_WEBAPP_three
 
-## 你是一個一個一個
+這是一個簡單的 HTML + CSS 練習專案。
 
-* 我修院
-* 德川
-* 佐佐木淳平
+## 功能
+
+- 顯示標題
+- 顯示段落文字
+- 一個簡單按鈕
+- 使用 CSS 做基本樣式設計
+
+## 使用方式
+
+1. 下載專案
+2. 打開 index.html
+3. 在瀏覽器查看結果
+
+## 作者
+
+AustinYanSebasmannAlderhaz
