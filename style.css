@@ -23,6 +23,8 @@ button:hover {
     background-color: darkblue;
 }
 .table1 {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family: Arial, sans-serif;
     margin-top: 100px;
