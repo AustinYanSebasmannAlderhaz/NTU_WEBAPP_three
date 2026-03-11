@@ -13,6 +13,23 @@ header {
     text-align: center;
 }
 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
 nav ul {
     padding: 0;
     list-style: none;
@@ -104,13 +121,35 @@ footer {
 
 /* Responsive Web Design for smaller screens */
 @media screen and (max-width: 600px) {
-    nav ul li {
+    .hamburger-menu {
         display: block;
-        margin-right: 0;
-        margin-bottom: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
-    nav ul li:last-child {
-        margin-bottom: 0;
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #1E1E1E;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    nav ul.nav-active {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
     }
 }

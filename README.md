@@ -6,6 +6,7 @@
 
 - `index.html`: 新增了多個 HTML5 語意化標籤和常見網頁元素。
 - `style.css`: 新增了 CSS 樣式來美化新增的元素及整體頁面排版。
+- `script.js`: 新增了 JavaScript 檔案來處理互動功能。
 - `README.md`: 建立此文件以說明變更內容。
 
 ## `index.html` 的主要變更
@@ -30,3 +31,4 @@
 - **表單樣式**: 為輸入框 (`<input>`) 新增了符合深色主題的樣式。
 - **互動效果**: 為導覽列連結增加了滑鼠懸停效果。
 - **RWD (Responsive Web Design)**: 使用 CSS Media Query，當螢幕寬度小於 600px 時，導覽列會變為垂直排列，以適應手機等小螢幕裝置。
+- **漢堡選單 (Hamburger Menu)**: 在手機版網頁上，將導覽列改為可點擊展開的漢堡選單，並透過 JavaScript 實現開關功能，提升行動裝置的使用體驗。
