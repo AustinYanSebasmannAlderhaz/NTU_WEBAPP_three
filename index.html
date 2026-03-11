@@ -7,28 +7,63 @@
 </head>
 <body>
 
-    <h1>歡迎來到我的網站</h1>
-    <p>這是我第一個 HTML + CSS 網頁。</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button>點我一下</button>
-    <div class="table1">
-        <table border="1">
-            <tr>
-                <td>John Cena</td>
-                <td>AJ Styles</td>
-                <td>CM Punk</td>
-            </tr>
-            <tr>
-                <td>Cody Rhodes</td>
-                <td>Roman Reigns</td>
-                <td>Drew McIntyre</td>
-            </tr>
-            <tr>
-                <td>Logan Paul</td>
-                <td>Oba Femi</td>
-                <td>Gunther</td>
-            </tr>
-        </table>
-    </div>
+    <main>
+        <h1>歡迎來到我的網站</h1>
+        <p>這是我第一個 HTML + CSS 網頁。</p>
+
+        <section class="card">
+            <h2>WWE Superstar</h2>
+            <div class="table-container">
+                <table border="1">
+                    <tr>
+                        <td>John Cena</td>
+                        <td>AJ Styles</td>
+                        <td>CM Punk</td>
+                    </tr>
+                    <tr>
+                        <td>Cody Rhodes</td>
+                        <td>Roman Reigns</td>
+                        <td>Drew McIntyre</td>
+                    </tr>
+                    <tr>
+                        <td>Logan Paul</td>
+                        <td>Oba Femi</td>
+                        <td>Gunther</td>
+                    </tr>
+                </table>
+            </div>
+            <button>點我一下</button>
+        </section>
+
+        <section class="card">
+            <h2>圖片範例</h2>
+            <img src="https://images.pexels.com/photos/17485709/pexels-photo-17485709.png?_gl=1*4zmoqp*_ga*OTE1NzUxODA2LjE3NzMxOTU1Nzg.*_ga_8JE65Q40S6*czE3NzMxOTU1NzgkbzEkZzEkdDE3NzMxOTU3MTkkajYwJGwwJGgw" alt="Placeholder image">
+        </section>
+
+        <section class="card">
+            <h2>聯絡表單</h2>
+            <form>
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">電子郵件：</label>
+                <input type="email" id="email" name="email"><br><br>
+                <input type="submit" value="提交">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 我的網站. All rights reserved.</p>
+    </footer>
 </body>
 </html>
