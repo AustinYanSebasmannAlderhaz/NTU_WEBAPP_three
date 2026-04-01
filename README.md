@@ -32,3 +32,9 @@
 - **互動效果**: 為導覽列連結增加了滑鼠懸停效果。
 - **RWD (Responsive Web Design)**: 使用 CSS Media Query，當螢幕寬度小於 600px 時，導覽列會變為垂直排列，以適應手機等小螢幕裝置。
 - **漢堡選單 (Hamburger Menu)**: 在手機版網頁上，將導覽列改為可點擊展開的漢堡選單，並透過 JavaScript 實現開關功能，提升行動裝置的使用體驗。
+
+
+## `新增資料庫`
+cd C:\NTU_YANBH\WebAPP2\DjangoEx\myblog
+C:\Users\AustinYan\VENV\Scripts\activate.ps1
+python manage.py runserver 127.0.0.1:8000

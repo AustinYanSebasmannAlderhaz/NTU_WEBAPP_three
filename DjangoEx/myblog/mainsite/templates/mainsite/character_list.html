@@ -1,0 +1,35 @@
+{% extends "mainsite/base.html" %}
+
+{% block title %}Characters | My Blog{% endblock %}
+
+{% block content %}
+    <h1 class="page-title">Character Roster</h1>
+    <p class="subtitle">Browse all characters in card view.</p>
+
+    {% if characters %}
+        <section class="character-grid">
+            {% for character in characters %}
+                <article class="character-card">
+                    <a class="character-link" href="{% url 'character_detail' character.pk %}">
+                        {% if character.cover_image %}
+                            <img class="character-cover" src="{{ character.cover_image.image.url }}" alt="{{ character.name }}">
+                        {% else %}
+                            <div class="character-cover placeholder">{{ character.name|slice:":1" }}</div>
+                        {% endif %}
+                        <div class="character-body">
+                            <h2 class="character-name">{{ character.name }}</h2>
+                            <p class="character-tags">
+                                {{ character.get_gender_display }}{% if character.element %} | {{ character.element }}{% endif %}
+                            </p>
+                            <p class="character-tags">
+                                {% if character.affiliation %}{{ character.affiliation }}{% else %}No affiliation{% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        </section>
+    {% else %}
+        <p class="empty">No characters yet. Add data from /admin.</p>
+    {% endif %}
+{% endblock %}

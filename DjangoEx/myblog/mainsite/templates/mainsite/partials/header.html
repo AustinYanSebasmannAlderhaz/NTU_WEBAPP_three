@@ -1,0 +1,16 @@
+{% load static %}
+
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="brand">
+            <a class="brand-link" href="{% url 'index' %}">
+                <img class="brand-logo" src="{% static 'img/AustinYan L5.png' %}" alt="AustinYan Logo">
+                <span>My Blog</span>
+            </a>
+        </h1>
+        <nav>
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'character_list' %}">Characters</a>
+        </nav>
+    </div>
+</header>

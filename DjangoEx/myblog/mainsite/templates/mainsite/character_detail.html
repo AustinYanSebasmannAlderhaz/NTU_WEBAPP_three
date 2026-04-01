@@ -1,0 +1,36 @@
+{% extends "mainsite/base.html" %}
+
+{% block title %}{{ character.name }} | Character{% endblock %}
+
+{% block content %}
+    <h1 class="page-title">{{ character.name }}</h1>
+    <p class="subtitle">Character profile</p>
+
+    <section class="character-detail">
+        <article class="character-panel">
+            <ul class="character-attrs">
+                <li><strong>Gender:</strong>{{ character.get_gender_display }}</li>
+                <li><strong>Affiliation:</strong>{{ character.affiliation|default:"N/A" }}</li>
+                <li><strong>Homeland:</strong>{{ character.homeland|default:"N/A" }}</li>
+                <li><strong>Occupation:</strong>{{ character.occupation|default:"N/A" }}</li>
+                <li><strong>Element:</strong>{{ character.element|default:"N/A" }}</li>
+                <li><strong>First Appearance:</strong>{{ character.first_appearance|default:"N/A" }}</li>
+            </ul>
+            <p class="body">{{ character.description|default:"No description yet." }}</p>
+            <a class="read-more" href="{% url 'character_list' %}">Back to character list</a>
+        </article>
+
+        <aside class="character-panel">
+            <h2 class="character-name">Gallery</h2>
+            {% if images %}
+                <div class="character-gallery">
+                    {% for img in images %}
+                        <img src="{{ img.image.url }}" alt="{{ character.name }} image {{ forloop.counter }}">
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty">No images uploaded yet.</p>
+            {% endif %}
+        </aside>
+    </section>
+{% endblock %}
